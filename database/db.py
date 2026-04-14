@@ -69,17 +69,20 @@ def seed_db():
     )
 
     expenses = [
-        (1, 5200.00, 'Food',   '2026-04-01', 'Monthly groceries from BigBasket'),
-        (1, 1450.00, 'Food',   '2026-04-03', 'Dinner at Barbeque Nation'),
-        (1, 3500.00, 'Travel', '2026-04-05', 'Uber rides this week'),
-        (1, 2100.00, 'Bills',  '2026-04-07', 'Jio Fiber broadband'),
-        (1, 1800.00, 'Bills',  '2026-04-08', 'Electricity bill - BESCOM'),
-        (1,  890.00, 'Food',   '2026-04-10', 'Swiggy orders'),
-        (1, 1500.00, 'Travel', '2026-04-11', 'Metro card recharge'),
-        (1, 1800.00, 'Food',   '2026-04-12', 'Weekly vegetables - local market'),
-        (2, 4500.00, 'Food',   '2026-04-02', 'Groceries from DMart'),
-        (2, 2800.00, 'Travel', '2026-04-06', 'Ola rides'),
-        (2, 3200.00, 'Bills',  '2026-04-09', 'Airtel postpaid bill'),
+        (1, 5200.00, 'Food',           '2026-04-01', 'Monthly groceries from BigBasket'),
+        (1, 3500.00, 'Transport',      '2026-04-05', 'Uber rides this week'),
+        (1, 2100.00, 'Bills',          '2026-04-07', 'Jio Fiber broadband'),
+        (1,  750.00, 'Health',         '2026-04-04', 'Apollo pharmacy medicines'),
+        (1, 1200.00, 'Entertainment',  '2026-04-09', 'BookMyShow movie tickets'),
+        (1, 2400.00, 'Shopping',       '2026-04-06', 'Myntra order - clothes'),
+        (1,  350.00, 'Other',          '2026-04-12', 'Ironing and laundry'),
+        (2, 4500.00, 'Food',           '2026-04-02', 'Groceries from DMart'),
+        (2, 2800.00, 'Transport',      '2026-04-06', 'Ola rides'),
+        (2, 3200.00, 'Bills',          '2026-04-09', 'Airtel postpaid bill'),
+        (2,  600.00, 'Health',         '2026-04-10', 'Gym monthly subscription'),
+        (2, 1500.00, 'Entertainment',  '2026-04-11', 'Netflix and Spotify annual'),
+        (2, 3100.00, 'Shopping',       '2026-04-07', 'Amazon order - electronics'),
+        (2,  200.00, 'Other',          '2026-04-13', 'Photocopy and printing'),
     ]
     db.executemany(
         'INSERT INTO expenses (user_id, amount, category, date, description) VALUES (?, ?, ?, ?, ?)',
